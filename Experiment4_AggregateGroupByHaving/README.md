@@ -38,123 +38,221 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+Write a SQL query to find the difference between the maximum and minimum price of fruits?
 
+Table: fruits
+```
+name        type
+
+----------  ----------
+
+id          INTEGER
+
+name        TEXT
+
+unit        TEXT
+
+inventory   INTEGER
+
+price       REAL
+```
 ```sql
--- Paste your SQL code below for Question 1
+SELECT MAX(price) - MIN(price) AS price_diff
+FROM fruits;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/7f8da42c-3ef2-45bf-a16b-764da79e9fb8)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to find  how many employees work in California?
+```
+Table: employee
 
+name        type
+----------  ----------
+id          INTEGER
+name        TEXT
+age         INTEGER
+city        TEXT
+income      INTEGER
+```
 ```sql
--- Paste your SQL code below for Question 2
+SELECT COUNT(*) AS employees_in_california
+FROM employee
+WHERE city='California';
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/3a5232e4-f493-4781-b849-66020585af62)
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+Write a SQL query to calculate the total number of working hours of all employees
+
+Sample table: employee1
+![image](https://github.com/user-attachments/assets/8b9bc3b7-7609-47f7-b734-48ff166000d4)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT SUM(workhour) AS "Total working hours"
+FROM employee1;
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/39a0976f-7924-4f5a-947c-f3b1d6bd244b)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+How many male and female doctors are there in each medical specialty?
+
+Sample table:Doctors Table
+![image](https://github.com/user-attachments/assets/07171251-5604-404e-a7c6-50cfa4b5b974)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT Specialty, Gender, COUNT(*) AS TotalDoctors
+FROM Doctors
+GROUP BY Specialty, Gender;
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/84c1fb2f-f469-40a1-8a90-35ee714190b8)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+What is the average dosage prescribed for each medication?
+
+Sample tablePrescriptions Table
+![image](https://github.com/user-attachments/assets/585377e8-d567-4247-a05b-570a8886b7a8)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT Medication, AVG(Dosage) AS AvgDosage
+FROM Prescriptions
+GROUP BY Medication;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/e61137a4-ddbb-453b-9c2a-dc554fc8a61f)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+How many prescriptions were written in each frequency category (e.g., once daily, twice daily)?
+
+Sample tablePrescriptions Table
+![image](https://github.com/user-attachments/assets/718c6c2c-5eeb-439d-a4de-7e12e0f96ebe)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT Frequency, COUNT(*) AS TotalPrescriptions
+FROM Prescriptions
+GROUP BY Frequency;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/593f876c-3a19-4da9-ac84-9976fda41d33)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+Write a SQL query to find the customer with longest name?
 
+Table: customer
+```
+name        type
+----------  ----------
+id          INTEGER
+name        TEXT
+city        TEXT
+email       TEXT
+phone       INTEGER
+```
 ```sql
--- Paste your SQL code below for Question 7
+select name,length(name) as length
+from customer
+order by length(name) desc limit 1;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/4aa34bb3-f132-4df6-825b-353bbf8b49c3)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Write the SQL query that achieves the grouping of data by age, calculates the minimum income for each age group, and includes only those age groups where the minimum income is less than 400,000.
+Sample table: employee
+
+![image](https://github.com/user-attachments/assets/1be1bbb1-bbbc-4e3a-8f59-5290dabe8bf9)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+Select age,min(income) as "MIN(income)"
+from employee
+group by age
+having min(income)<400000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/369d2d76-9275-433e-b56b-8abf5ab5dd43)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+Write the SQL query that achieves the grouping of data by occupation, calculates the minimum work hours for each occupation, and excludes occupations where the minimum work hour is not greater than 8.
+
+Sample table: employee1
+![image](https://github.com/user-attachments/assets/53ec6678-1206-4582-bee4-43f0a75c84d7)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+select occupation, min(workhour) as "MIN(workhour)"
+from employee1
+group by occupation 
+having min(workhour)>8;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/f2138f40-b64d-4b13-93bb-ac3581031903)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+How many prescriptions were written for each medication?
+
+Sample tablePrescriptions Table
+
+![image](https://github.com/user-attachments/assets/b82a6394-a33f-4962-867d-116446d46e01)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT medication AS Medication, COUNT(*) AS TotalPrescriptions
+FROM prescriptions
+GROUP BY medication;
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/eaaa5887-826d-4d79-b72d-261f897de349)
+
+
+### **Grade:**
+![image](https://github.com/user-attachments/assets/5e80e6a4-b823-48e5-9427-65319f278159)
 
 
 ## RESULT
