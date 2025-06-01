@@ -464,12 +464,6 @@ WHERE
 ![image](https://github.com/user-attachments/assets/e9484682-b7a3-4b06-aad3-765ecf3646cc)
 
 
-## grade:
-![image](https://github.com/user-attachments/assets/9db63273-fadc-4803-b2b6-fe41158ed295)
-
-
-
-
 
 ## RESULT
 Thus, the SQL queries to implement different types of joins have been executed successfully.
