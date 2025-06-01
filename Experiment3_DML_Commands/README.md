@@ -240,7 +240,6 @@ where grade>100;
 
 ![image](https://github.com/user-attachments/assets/f0dfbbd9-0244-4ae5-85aa-b9be7d710397)
 
-```
 ```sql
 SELECT EmpID, EmpFname, EmpLname, Department, Project, Address, DOB, Gender
 FROM EmployeeInfo1
