@@ -217,6 +217,3 @@ add column  Mobilenumber number;
 ![image](https://github.com/user-attachments/assets/ab702d54-ed70-40da-988f-e0cf946ed1ae)
 
 
-**GRADE:**
-![image](https://github.com/user-attachments/assets/d7327788-1f75-46a6-8fa4-1ccc6f5ba8dd)
-
