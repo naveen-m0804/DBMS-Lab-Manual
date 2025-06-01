@@ -251,9 +251,6 @@ GROUP BY medication;
 ![image](https://github.com/user-attachments/assets/eaaa5887-826d-4d79-b72d-261f897de349)
 
 
-### **Grade:**
-![image](https://github.com/user-attachments/assets/5e80e6a4-b823-48e5-9427-65319f278159)
-
 
 ## RESULT
 Thus, the SQL queries to implement aggregate functions, GROUP BY, and HAVING clause have been executed successfully.
