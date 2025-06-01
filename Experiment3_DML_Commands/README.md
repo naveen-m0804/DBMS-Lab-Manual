@@ -251,5 +251,3 @@ WHERE Department IS NULL;
 
 ![image](https://github.com/user-attachments/assets/08de48e0-d220-4459-a99c-fbe034a69526)
 
-**GRADE**
-![image](https://github.com/user-attachments/assets/31e86a45-f646-4425-88ef-4c867fe3eed5)
